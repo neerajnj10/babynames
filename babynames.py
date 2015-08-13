@@ -3,8 +3,6 @@
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
 
-# Google's Python Class
-# http://code.google.com/edu/languages/google-python-class/
 
 import sys
 import re
@@ -41,8 +39,6 @@ def extract_names(filename):
   ['2006', 'Aaliyah 91', Aaron 57', 'Abagail 895', ' ...]
   """
   # +++your code here+++
-  # LAB(begin solution)
-  # The list [year, name_and_rank, name_and_rank, ...] we'll eventually return.
   names = []
 
   # Open and read the file.
@@ -89,9 +85,6 @@ def extract_names(filename):
     names.append(name + " " + names_to_rank[name])
 
   return names
-  # LAB(replace solution)
-  # return
-  # LAB(end solution)
 
 
 def main():
@@ -110,10 +103,6 @@ def main():
     summary = True
     del args[0]
 
-  # +++your code here+++
-  # For each filename, get the names, then either print the text output
-  # or write it to a summary file
-  # LAB(begin solution)
   for filename in args:
     names = extract_names(filename)
 
@@ -126,7 +115,6 @@ def main():
       outf.close()
     else:
       print text
-  # LAB(end solution)
 
 if __name__ == '__main__':
   main()
